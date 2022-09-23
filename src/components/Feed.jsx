@@ -37,7 +37,15 @@ const Feed = () => {
           sx={{ mt: 1.5, color: "#fff" }}
         >
           Copyright &copy; {new Date().getFullYear()}{" "}
-          <span style={{ color: "#FC1503" }}>YouTube Clone</span>
+          <a
+            href="http://github.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+            style={{ color: "#FC1503" }}
+            title="View Source Code"
+          >
+            YouTube Clone
+          </a>
         </Typography>
       </Box>
 
