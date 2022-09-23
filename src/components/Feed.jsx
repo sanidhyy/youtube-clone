@@ -38,7 +38,7 @@ const Feed = () => {
         >
           Copyright &copy; {new Date().getFullYear()}{" "}
           <a
-            href="http://github.com/"
+            href="https://github.com/Technical-Shubham-tech/youtube-clone/"
             target="_blank"
             rel="noreferrer noopener"
             style={{ color: "#FC1503" }}
