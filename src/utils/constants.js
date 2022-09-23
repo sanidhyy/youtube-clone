@@ -11,12 +11,14 @@ import GraphicEqIcon from "@mui/icons-material/GraphicEq";
 import TheaterComedyIcon from "@mui/icons-material/TheaterComedy";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
+import ComputerIcon from "@mui/icons-material/Computer";
+import LogoImage from "../assets/logo.png";
 
-export const logo = "https://i.ibb.co/4P6V4zr/image.png";
+export const logo = LogoImage;
 
 export const categories = [
   { name: "New", icon: <HomeIcon /> },
-  { name: "JS Mastery", icon: <CodeIcon /> },
+  { name: "Computerphile", icon: <ComputerIcon /> },
   { name: "Coding", icon: <CodeIcon /> },
   { name: "ReactJS", icon: <CodeIcon /> },
   { name: "NextJS", icon: <CodeIcon /> },
