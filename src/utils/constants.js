@@ -13,6 +13,8 @@ import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 import ComputerIcon from "@mui/icons-material/Computer";
 import LogoImage from "../assets/logo.png";
+import demoThumbnailImage from "../assets/demo-thumbnail.png";
+import demoProfileImage from "../assets/demo-profile.png";
 
 export const logo = LogoImage;
 
@@ -36,11 +38,9 @@ export const categories = [
   { name: "Crypto", icon: <DeveloperModeIcon /> },
 ];
 
-export const demoThumbnailUrl = "https://i.ibb.co/G2L2Gwp/API-Course.png";
-export const demoChannelUrl = "/channel/UCmXmlB4-HJytD7wek0Uo97A";
-export const demoVideoUrl = "/video/GDa8kZLNhJ4";
-export const demoChannelTitle = "JavaScript Mastery";
-export const demoVideoTitle =
-  "Build and Deploy 5 JavaScript & React API Projects in 10 Hours - Full Course | RapidAPI";
-export const demoProfilePicture =
-  "http://dergipark.org.tr/assets/app/images/buddy_sample.png";
+export const demoThumbnailUrl = demoThumbnailImage;
+export const demoChannelUrl = "/channel/UC9-y-6csu5WGm29I7JiwpnA";
+export const demoVideoUrl = "/video/BBJa32lCaaY";
+export const demoChannelTitle = "Awesome Channel";
+export const demoVideoTitle = "A Random YouTube Video";
+export const demoProfilePicture = demoProfileImage;
