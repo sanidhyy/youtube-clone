@@ -7,6 +7,7 @@ const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
 
+  // handle search submit
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -34,6 +35,7 @@ const SearchBar = () => {
         mr: { sm: 5 },
       }}
     >
+      {/* search bar */}
       <input
         type="text"
         className="search-bar"

@@ -12,6 +12,7 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
       flexDirection: { md: "column" },
     }}
   >
+    {/* Categories */}
     {categories.map((category) => (
       <button
         className="category-btn"
@@ -22,6 +23,7 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
         onClick={() => setSelectedCategory(category.name)}
         key={category.name}
       >
+        {/* Category Icon */}
         <span
           style={{
             color: category.name === selectedCategory ? "#fff" : "red",
@@ -30,6 +32,7 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
         >
           {category.icon}
         </span>
+        {/* Category Name */}
         <span
           style={{ opacity: category.name === selectedCategory ? "1" : "0.8" }}
         >

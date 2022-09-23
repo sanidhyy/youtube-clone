@@ -4,10 +4,12 @@ import { Sidebar, Videos } from "./";
 
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 
+// Feed
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("New");
   const [videos, setVideos] = useState([]);
 
+  // fetch videos from api
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) =>
       setVideos(data.items)
@@ -23,20 +25,24 @@ const Feed = () => {
           px: { sx: 0, md: 2 },
         }}
       >
+        {/* Sidebar */}
         <Sidebar
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
         />
+        {/* Copyright */}
         <Typography
           className="copyright"
           variant="body2"
           sx={{ mt: 1.5, color: "#fff" }}
         >
-          Copyright 2022 YouTube Clone
+          Copyright &copy; {new Date().getFullYear()}{" "}
+          <span style={{ color: "#FC1503" }}>YouTube Clone</span>
         </Typography>
       </Box>
 
       <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
+        {/* Title */}
         <Typography
           variant="h4"
           fontWeight="bold"
@@ -46,6 +52,7 @@ const Feed = () => {
           {selectedCategory} <span style={{ color: "#FC1503" }}>videos</span>
         </Typography>
 
+        {/* Videos */}
         <Videos videos={videos} />
       </Box>
     </Stack>

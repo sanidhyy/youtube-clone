@@ -33,11 +33,12 @@ const ChannelCard = ({ channelDetail, marginTop }) => (
           color: "#fff",
         }}
       >
+        {/* Channel Logo */}
         <CardMedia
           image={
             channelDetail?.snippet?.thumbnails?.high?.url || demoProfilePicture
           }
-          alt={channelDetail?.snippet?.title}
+          alt={channelDetail?.snippet?.title || demoChannelTitle}
           sx={{
             borderRadius: "50%",
             height: "180px",
@@ -46,10 +47,12 @@ const ChannelCard = ({ channelDetail, marginTop }) => (
             border: "1px solid #e3e3e3",
           }}
         />
+        {/* Channel Title */}
         <Typography variant="h6">
           {channelDetail?.snippet?.title || demoChannelTitle}
           <CheckCircle sx={{ fontSize: 14, color: "gray", ml: "5px" }} />
         </Typography>
+        {/* Channel Subscribers Count */}
         {channelDetail?.statistics?.subscriberCount && (
           <Typography>
             {parseInt(

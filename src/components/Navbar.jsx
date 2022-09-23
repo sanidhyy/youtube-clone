@@ -17,9 +17,11 @@ const Navbar = () => (
       justifyContent: "space-between",
     }}
   >
+    {/* Logo */}
     <Link to="/" style={{ display: "flex", alignItems: "center" }}>
       <img src={logo} alt="YouTube Clone" height={45} />
     </Link>
+    {/* Search Bar */}
     <SearchBar />
   </Stack>
 );

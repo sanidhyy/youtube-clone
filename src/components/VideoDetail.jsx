@@ -13,15 +13,18 @@ const VideoDetail = () => {
   const { id } = useParams();
 
   useEffect(() => {
+    // fetch video details
     fetchFromAPI(`videos?part=snippet,statistics&id=${id}`).then((data) =>
       setVideoDetail(data.items[0])
     );
 
+    // fetch related videos
     fetchFromAPI(`search?part=snippet&relatedToVideoId=${id}&type=video`).then(
       (data) => setVideos(data.items)
     );
   }, [id]);
 
+  // Loading
   if (!videoDetail?.snippet) return "Loading...";
 
   const {
@@ -34,11 +37,13 @@ const VideoDetail = () => {
       <Stack direction={{ xs: "column", md: "row" }}>
         <Box flex={1}>
           <Box sx={{ width: "100%", position: "sticky", top: "86px" }}>
+            {/* Video Player */}
             <ReactPlayer
               url={`https://www.youtube.com/watch?v=${id}`}
               className="react-player"
               controls
             />
+            {/* Title */}
             <Typography color="#fff" variant="h5" fontWeight="bold" p={2}>
               {title}
             </Typography>
@@ -49,6 +54,7 @@ const VideoDetail = () => {
               py={1}
               px={2}
             >
+              {/* Channel Title */}
               <Link to={`/channel/${channelId}`}>
                 <Typography
                   variant={{ sm: "subtitle1", md: "h6" }}
@@ -60,10 +66,13 @@ const VideoDetail = () => {
                   />
                 </Typography>
               </Link>
+              {/* Video Stats */}
               <Stack direction="row" gap="20px" alignItems="center">
+                {/* Views */}
                 <Typography variant="body1" sx={{ opacity: 0.7 }}>
                   {parseInt(viewCount).toLocaleString()} views
                 </Typography>
+                {/* Likes */}
                 <Typography variant="body1" sx={{ opacity: 0.7 }}>
                   {parseInt(likeCount).toLocaleString()} likes
                 </Typography>
@@ -78,6 +87,7 @@ const VideoDetail = () => {
           justifyContent="center"
           alignItems="center"
         >
+          {/* Related Videos */}
           <Videos videos={videos} direction="column" />
         </Box>
       </Stack>
