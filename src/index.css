@@ -1,3 +1,5 @@
+/* Basic styles */
+
 html,
 body {
   margin: 0;
@@ -10,6 +12,7 @@ a {
   color: black;
 }
 
+/* Customize Scrollbar */
 ::-webkit-scrollbar {
   width: 0px;
   height: 5px;
@@ -62,6 +65,7 @@ a {
   transition: all 0.3s ease;
 }
 
+/* Reponsiveness for smaller Devices */
 @media screen and (max-width: 900px) {
   .category-btn {
     margin: 10px;
