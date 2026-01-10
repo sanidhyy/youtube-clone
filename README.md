@@ -2,14 +2,14 @@
 
 ![Modern YouTube Clone using React JS](https://user-images.githubusercontent.com/71302066/191976468-659f2a7c-b542-4a37-b97e-1bcf91b9898c.png "Modern YouTube Clone using React JS")
 
-[![Ask Me Anything!](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/Technical-Shubham-tech "Ask Me Anything!")
-[![GitHub license](https://img.shields.io/github/license/Technical-Shubham-tech/youtube-clone)](https://github.com/Technical-Shubham-tech/youtube-clone/blob/main/LICENSE.md "GitHub license")
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Technical-Shubham-tech/youtube-clone/commits/main "Maintenance")
-[![GitHub branches](https://badgen.net/github/branches/Technical-Shubham-tech/youtube-clone)](https://github.com/Technical-Shubham-tech/youtube-clone/branches "GitHub branches")
-[![Github commits](https://badgen.net/github/commits/Technical-Shubham-tech/youtube-clone/main)](https://github.com/Technical-Shubham-tech/youtube-clone/commits "Github commits")
+[![Ask Me Anything!](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/sanidhyy "Ask Me Anything!")
+[![GitHub license](https://img.shields.io/github/license/sanidhyy/youtube-clone)](https://github.com/sanidhyy/youtube-clone/blob/main/LICENSE.md "GitHub license")
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/sanidhyy/youtube-clone/commits/main "Maintenance")
+[![GitHub branches](https://badgen.net/github/branches/sanidhyy/youtube-clone)](https://github.com/sanidhyy/youtube-clone/branches "GitHub branches")
+[![Github commits](https://badgen.net/github/commits/sanidhyy/youtube-clone/main)](https://github.com/sanidhyy/youtube-clone/commits "Github commits")
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1c446a3d-86da-4db4-addd-84eb858ba60f/deploy-status)](https://yt-youtube.netlify.app/ "Netlify Status")
-[![GitHub issues](https://img.shields.io/github/issues/Technical-Shubham-tech/youtube-clone)](https://github.com/Technical-Shubham-tech/youtube-clone/issues "GitHub issues")
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/Technical-Shubham-tech/youtube-clone)](https://github.com/Technical-Shubham-tech/youtube-clone/pulls "GitHub pull requests")
+[![GitHub issues](https://img.shields.io/github/issues/sanidhyy/youtube-clone)](https://github.com/sanidhyy/youtube-clone/issues "GitHub issues")
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/sanidhyy/youtube-clone)](https://github.com/sanidhyy/youtube-clone/pulls "GitHub pull requests")
 
 ## ⚠️ Before you start
 
@@ -55,7 +55,7 @@ REACT_APP_RAPID_API_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 [<img src="https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white" width="150" height="40" />](https://mui.com/ "Material UI")
 
-[<img src="http://ForTheBadge.com/images/badges/built-with-love.svg" alt="Built with Love">](https://github.com/Technical-Shubham-tech/ "Built with Love")
+[<img src="http://ForTheBadge.com/images/badges/built-with-love.svg" alt="Built with Love">](https://github.com/sanidhyy/ "Built with Love")
 
 ## :wrench: Stats
 
@@ -71,8 +71,8 @@ You might encounter some bugs while using this app. You are more than welcome to
 
 ## :rocket: Follow Me
 
-[![GitHub followers](https://img.shields.io/github/followers/Technical-Shubham-tech?style=social&label=Follow&maxAge=2592000)](https://github.com/Technical-Shubham-tech "Follow Me")
-[![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FTechnicalShubam)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FTechnical-Shubham-tech%2Fmedical-chat-app "Tweet")
+[![GitHub followers](https://img.shields.io/github/followers/sanidhyy?style=social&label=Follow&maxAge=2592000)](https://github.com/sanidhyy "Follow Me")
+[![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fsanidhyyy)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fsanidhyy%2Fmedical-chat-app "Tweet")
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/channel/UCNAz_hUVBG2ZUN8TVm0bmYw "Subscribe my Channel")
 
 ## :star: Give A Star
