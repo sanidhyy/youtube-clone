@@ -1,7 +1,7 @@
 ## Contributing
 
-[fork]: https://github.com/Technical-Shubham-tech/youtube-clone/fork
-[pr]: https://github.com/Technical-Shubham-tech/youtube-clone/compare
+[fork]: https://github.com/sanidhyy/youtube-clone/fork
+[pr]: https://github.com/sanidhyy/youtube-clone/compare
 [style]: https://standardjs.com/
 [code-of-conduct]: CODE_OF_CONDUCT.md
 
