@@ -1,6 +1,6 @@
-# Modern YouTube Clone using React JS
+# Modern YouTube Clone using React and TypeScript
 
-![Modern YouTube Clone using React JS](https://user-images.githubusercontent.com/71302066/191976468-659f2a7c-b542-4a37-b97e-1bcf91b9898c.png "Modern YouTube Clone using React JS")
+![Modern YouTube Clone using React and TypeScript](https://user-images.githubusercontent.com/71302066/191976468-659f2a7c-b542-4a37-b97e-1bcf91b9898c.png "Modern YouTube Clone using React and TypeScript")
 
 [![Ask Me Anything!](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/sanidhyy "Ask Me Anything!")
 [![GitHub license](https://img.shields.io/github/license/sanidhyy/youtube-clone)](https://github.com/sanidhyy/youtube-clone/blob/main/LICENSE.md "GitHub license")
@@ -13,23 +13,29 @@
 
 ## ⚠️ Before you start
 
-1. Make sure **Git** and **NodeJS** is installed
-2. Create .env file in root folder.
+1. Make sure **Git** and **Node.js 22.22+** are installed.
+2. Create a `.env` file in the project root.
 3. Contents of **.env**
 
 ```
-REACT_APP_RAPID_API_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+RAPID_API_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
-4. Now, to setup API, go to [Rapid API Website](https://rapidapi.com/) and create an account.
+This key is used only by the Netlify Function at `/api/youtube`. Do **not** prefix it with `VITE_` or `REACT_APP_`, or it will be exposed in the browser bundle.
 
-5. Enable this API to fetch youtube videos and channels: [API: Youtube v3 by ytdlfree](https://rapidapi.com/ytdlfree/api/youtube-v31/).
+4. Go to [Rapid API](https://rapidapi.com/) and create an account.
+
+5. Enable this API to fetch YouTube videos and channels: [API: Youtube v3 by ytdlfree](https://rapidapi.com/ytdlfree/api/youtube-v31/).
 
 ![Copy API Key](https://user-images.githubusercontent.com/71302066/191980749-45ff87e2-aee8-48c6-aab1-220023127e25.png)
 
-6. After enabling you can get your API Keys and paste them in `.env` file in `REACT_APP_RAPID_API_KEY`.
+6. Paste the key into `.env` as `RAPID_API_KEY`.
 
-**NOTE:** Make sure you don't share these keys publicaly.
+**NOTE:** Do not share these keys publicly.
+
+### Netlify production env
+
+If this site was previously using `REACT_APP_RAPID_API_KEY`, rename that variable to `RAPID_API_KEY` in the Netlify dashboard. Set the build command to `pnpm build` and the publish directory to `dist`.
 
 ## :pushpin: How to use this App?
 
@@ -37,7 +43,7 @@ REACT_APP_RAPID_API_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXX
 2. Open **terminal** in root directory.
 3. Type and Run `npm install` or `pnpm install`.
 4. Once packages are installed, you can start this app using `npm run dev` or `pnpm dev`.
-5. Now app is fully configured and you can start using this app :+1:.
+5. Open [http://localhost:5173](http://localhost:5173). The Vite plugin emulates Netlify Functions locally, so the RapidAPI proxy works without `netlify dev`.
 
 ### :raising_hand: Need Help?
 
@@ -57,9 +63,11 @@ If you run into issues during installation or setup:
 
 ## :gear: Built with
 
-[<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" width="150" height="40" />](https://www.javascript.com/ "JavaScript")
+[<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" width="150" height="40" />](https://www.typescriptlang.org/ "TypeScript")
 
-[<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" width="150" />](https://reactjs.org/ "React JS")
+[<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" width="150" height="40" />](https://vite.dev/ "Vite")
+
+[<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" width="150" />](https://react.dev/ "React")
 
 [<img src="https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white" width="150" height="40" />](https://mui.com/ "Material UI")
 
@@ -92,63 +100,27 @@ In the project directory, you can run:
 
 ### `npm run dev` / `pnpm dev`
 
-Runs the app in the development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app in development mode.
+Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
 
 The page will reload when you make changes.
-You may also see any lint errors in the console.
+You may also see lint errors in the console.
 
-### `npm run test` `pnpm test`
+### `npm run lint` / `pnpm lint`
 
-Launches the test runner in the interactive watch mode.
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs ESLint across the project.
 
-### `npm run build` or `pnpm build`
+### `npm run build` / `pnpm build`
 
-Builds the app for production to the `build` folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Typechecks the app and builds it for production into the `dist` folder.
 
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
+### `npm run preview` / `pnpm preview`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject` or `pnpm eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Serves the production build locally for a final check.
 
 ## :page_with_curl: Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` / `pnpm build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Vite](https://vite.dev/guide/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/docs/)
+- [Netlify Functions](https://docs.netlify.com/build/functions/get-started/)
