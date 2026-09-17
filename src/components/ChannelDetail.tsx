@@ -26,7 +26,9 @@ const ChannelDetail = () => {
   }, [id]);
 
   return (
-    <Box minHeight="95vh">
+    <Box sx={{
+      minHeight: "95vh"
+    }}>
       <Box>
         <div
           style={{
@@ -38,12 +40,15 @@ const ChannelDetail = () => {
         />
         <ChannelCard channelDetail={channelDetail} marginTop="-110px" />
       </Box>
-      <Box display="flex" p="2">
+      <Box
+        sx={{
+          display: "flex",
+          p: "2"
+        }}>
         <Box sx={{ mr: { sm: "100px" } }} />
         <Videos videos={videos} />
       </Box>
     </Box>
   );
 };
-
 export default ChannelDetail;

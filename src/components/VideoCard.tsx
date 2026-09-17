@@ -37,7 +37,12 @@ const VideoCard = ({ video }: VideoCardProps) => {
       </Link>
       <CardContent sx={{ backgroundColor: "#1e1e1e", height: "106px" }}>
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
-          <Typography variant="subtitle1" fontWeight="bold" color="#FFF">
+          <Typography
+            variant="subtitle1"
+            sx={{
+              fontWeight: "bold",
+              color: "#FFF"
+            }}>
             {snippet?.title?.slice(0, 60) || demoVideoTitle.slice(0, 6)}
           </Typography>
         </Link>
@@ -48,7 +53,9 @@ const VideoCard = ({ video }: VideoCardProps) => {
               : demoChannelUrl
           }
         >
-          <Typography variant="subtitle2" fontWeight="bold" color="gray">
+          <Typography variant="subtitle2" color="gray" sx={{
+            fontWeight: "bold"
+          }}>
             {snippet?.channelTitle || demoChannelTitle}
             <CheckCircle sx={{ fontSize: 12, color: "gray", ml: "5px" }} />
           </Typography>
@@ -57,5 +64,4 @@ const VideoCard = ({ video }: VideoCardProps) => {
     </Card>
   );
 };
-
 export default VideoCard;

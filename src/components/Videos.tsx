@@ -18,10 +18,15 @@ const Videos = ({ videos, direction = "row" }: VideosProps) => {
   }
 
   return (
-    <Stack direction={direction} flexWrap="wrap" justifyContent="start" gap={2}>
+    <Stack
+      direction={direction}
+      sx={{
+        flexWrap: "wrap",
+        justifyContent: "start",
+        gap: 2
+      }}>
       {videos.map((item, idx) => {
         const resourceId = getResourceId(item);
-
         return (
           <Box key={idx}>
             {resourceId?.videoId && <VideoCard video={item} />}
