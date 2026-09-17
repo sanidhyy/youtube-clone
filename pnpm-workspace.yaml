@@ -3,6 +3,3 @@ allowBuilds:
   core-js-pure: false
   esbuild: true
   sharp: false
-
-overrides:
-  react-is: 18.3.1
