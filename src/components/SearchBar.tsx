@@ -1,7 +1,7 @@
 import { IconButton, Paper } from "@mui/material";
 import { Search } from "@mui/icons-material";
 import { useState, type FormEvent } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");

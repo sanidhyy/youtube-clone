@@ -2,7 +2,7 @@ import { CheckCircle } from "@mui/icons-material";
 import { Box, Stack, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router";
 
 import type { YouTubeItem } from "../types/youtube";
 import { fetchFromAPI } from "../utils/fetchFromAPI";

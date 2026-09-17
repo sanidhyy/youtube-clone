@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router";
 
 import type { YouTubeItem } from "../types/youtube";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
