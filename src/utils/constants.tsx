@@ -3,27 +3,29 @@
  *  Don't remove anything from here (if not sure)
  **/
 
-import MusicNoteIcon from "@mui/icons-material/MusicNote";
-import HomeIcon from "@mui/icons-material/Home";
-import CodeIcon from "@mui/icons-material/Code";
-import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
-import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
-import LiveTvIcon from "@mui/icons-material/LiveTv";
-import SchoolIcon from "@mui/icons-material/School";
-import FaceRetouchingNaturalIcon from "@mui/icons-material/FaceRetouchingNatural";
 import CheckroomIcon from "@mui/icons-material/Checkroom";
-import GraphicEqIcon from "@mui/icons-material/GraphicEq";
-import TheaterComedyIcon from "@mui/icons-material/TheaterComedy";
-import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
-import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
+import CodeIcon from "@mui/icons-material/Code";
 import ComputerIcon from "@mui/icons-material/Computer";
-import LogoImage from "../assets/logo.png";
-import demoThumbnailImage from "../assets/demo-thumbnail.png";
+import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
+import FaceRetouchingNaturalIcon from "@mui/icons-material/FaceRetouchingNatural";
+import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
+import GraphicEqIcon from "@mui/icons-material/GraphicEq";
+import HomeIcon from "@mui/icons-material/Home";
+import LiveTvIcon from "@mui/icons-material/LiveTv";
+import MusicNoteIcon from "@mui/icons-material/MusicNote";
+import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
+import SchoolIcon from "@mui/icons-material/School";
+import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
+import TheaterComedyIcon from "@mui/icons-material/TheaterComedy";
+import type { ReactNode } from "react";
+
 import demoProfileImage from "../assets/demo-profile.png";
+import demoThumbnailImage from "../assets/demo-thumbnail.png";
+import LogoImage from "../assets/logo.png";
 
 export const logo = LogoImage;
 
-export const categories = [
+export const categories: { name: string; icon: ReactNode }[] = [
   { name: "New", icon: <HomeIcon /> },
   { name: "Computerphile", icon: <ComputerIcon /> },
   { name: "Coding", icon: <CodeIcon /> },

@@ -2,51 +2,55 @@
   "name": "youtube-clone",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "scripts": {
-    "dev": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.3",
-    "axios": "^1.18.0",
+    "@netlify/functions": "^5.1.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-player": "^2.10.1",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "^5.0.1"
+    "react-router-dom": "^6.3.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@netlify/vite-plugin": "^2.7.15",
+    "@types/node": "^24.5.2",
+    "@types/react": "^18.3.24",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^5.0.3",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.4.0",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.44.0",
+    "vite": "^8.0.0"
+  },
   "license": "MIT",
   "author": "Sanidhya Kr. Verma",
-  "description": "YouTube Clone using React JS",
+  "description": "YouTube Clone using React and TypeScript",
   "keywords": [
-    "reactjs",
     "react",
+    "typescript",
+    "vite",
     "youtube-clone",
     "material-ui",
     "modern-ui/ux",
-    "js",
-    "javascript",
     "html",
     "css",
     "rapid-api",
-    "google-api"
-  ],
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "netlify-functions"
+  ]
 }

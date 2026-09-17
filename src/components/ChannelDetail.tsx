@@ -1,26 +1,27 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import { Box } from "@mui/material";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-import { Videos, ChannelCard } from "./";
+import type { YouTubeItem } from "../types/youtube";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
+import { ChannelCard, Videos } from "./";
 
 const ChannelDetail = () => {
-  const [channelDetail, setChannelDetail] = useState(null);
-  const [videos, setVideos] = useState([]);
-
+  const [channelDetail, setChannelDetail] = useState<YouTubeItem | null>(null);
+  const [videos, setVideos] = useState<YouTubeItem[]>([]);
   const { id } = useParams();
 
-  // fetch channel details from api
   useEffect(() => {
-    // channel details
+    if (!id) {
+      return;
+    }
+
     fetchFromAPI(`channels?part=snippet&id=${id}`).then((data) =>
-      setChannelDetail(data?.items[0])
+      setChannelDetail(data.items?.[0] ?? null),
     );
 
-    // channel videos
     fetchFromAPI(`search?channelId=${id}&part=snippet&order=date`).then(
-      (data) => setVideos(data?.items)
+      (data) => setVideos(data.items ?? []),
     );
   }, [id]);
 
@@ -35,12 +36,10 @@ const ChannelDetail = () => {
             height: "300px",
           }}
         />
-        {/* Channel Card */}
         <ChannelCard channelDetail={channelDetail} marginTop="-110px" />
       </Box>
       <Box display="flex" p="2">
         <Box sx={{ mr: { sm: "100px" } }} />
-        {/* Channel Videos */}
         <Videos videos={videos} />
       </Box>
     </Box>

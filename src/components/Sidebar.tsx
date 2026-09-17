@@ -1,9 +1,13 @@
-import React from "react";
 import { Stack } from "@mui/material";
 
 import { categories } from "../utils/constants";
 
-const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
+type SidebarProps = {
+  selectedCategory: string;
+  setSelectedCategory: (category: string) => void;
+};
+
+const Sidebar = ({ selectedCategory, setSelectedCategory }: SidebarProps) => (
   <Stack
     direction="row"
     sx={{
@@ -12,18 +16,18 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
       flexDirection: { md: "column" },
     }}
   >
-    {/* Categories */}
     {categories.map((category) => (
       <button
         className="category-btn"
+        type="button"
         style={{
-          background: category.name === selectedCategory && "#FC1503",
+          background:
+            category.name === selectedCategory ? "#FC1503" : "transparent",
           color: "#fff",
         }}
         onClick={() => setSelectedCategory(category.name)}
         key={category.name}
       >
-        {/* Category Icon */}
         <span
           style={{
             color: category.name === selectedCategory ? "#fff" : "red",
@@ -32,7 +36,6 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
         >
           {category.icon}
         </span>
-        {/* Category Name */}
         <span
           style={{ opacity: category.name === selectedCategory ? "1" : "0.8" }}
         >

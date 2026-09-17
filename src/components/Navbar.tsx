@@ -1,4 +1,3 @@
-import React from "react";
 import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -17,11 +16,9 @@ const Navbar = () => (
       justifyContent: "space-between",
     }}
   >
-    {/* Logo */}
     <Link to="/" style={{ display: "flex", alignItems: "center" }}>
       <img src={logo} alt="YouTube Clone" height={45} title="YouTube Clone" />
     </Link>
-    {/* Search Bar */}
     <SearchBar />
   </Stack>
 );
