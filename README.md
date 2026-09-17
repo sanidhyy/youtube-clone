@@ -21,8 +21,6 @@
 RAPID_API_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
-This key is used only by the Netlify Function at `/api/youtube`. Do **not** prefix it with `VITE_` or `REACT_APP_`, or it will be exposed in the browser bundle.
-
 4. Go to [Rapid API](https://rapidapi.com/) and create an account.
 
 5. Enable this API to fetch YouTube videos and channels: [API: Youtube v3 by ytdlfree](https://rapidapi.com/ytdlfree/api/youtube-v31/).
@@ -32,10 +30,6 @@ This key is used only by the Netlify Function at `/api/youtube`. Do **not** pref
 6. Paste the key into `.env` as `RAPID_API_KEY`.
 
 **NOTE:** Do not share these keys publicly.
-
-### Netlify production env
-
-If this site was previously using `REACT_APP_RAPID_API_KEY`, rename that variable to `RAPID_API_KEY` in the Netlify dashboard. Set the build command to `pnpm build` and the publish directory to `dist`.
 
 ## :pushpin: How to use this App?
 
