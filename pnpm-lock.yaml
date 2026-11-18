@@ -21,8 +21,8 @@ importers:
         specifier: ^9.4.0
         version: 9.4.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@7.2.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@7.2.0))(@types/react@19.3.0)(react@19.3.0)(supports-color@7.2.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@netlify/functions':
-        specifier: ^6.0.0
-        version: 6.0.0
+        specifier: ^6.1.1
+        version: 6.1.1
       react:
         specifier: ^19.3.0
         version: 19.3.0
@@ -790,6 +790,10 @@ packages:
     resolution: {integrity: sha512-tRWkLmO6pyqZetFkhYgtX6LH1umqaJAZN5mRNOJubca/+Mqm0VTUyl51FeS0UbVfetLwiwgpzbGmABpc5gGHyg==}
     engines: {node: '>=22.12.0'}
 
+  '@netlify/cache@4.2.1':
+    resolution: {integrity: sha512-10RASHobwpQ3DKKptwPen6zxpbNUBCE+5WWFufOlRwyfNjwhY95h3XuvPFLNQMuROcZY9Yiw++Xww+qkcLkZtw==}
+    engines: {node: '>=22.12.0'}
+
   '@netlify/config@25.2.5':
     resolution: {integrity: sha512-VqJeiQk2eZ9o3ls7C57e2TEalQdR2U3oLjI/Rlo9njU0l8bD3Cr6kBTU5shGIPQgeJVGU9rQLaX24Yd7WXrWVA==}
     engines: {node: '>=22.12.0'}
@@ -830,6 +834,10 @@ packages:
     resolution: {integrity: sha512-Pee+FoFnAtdejTkl62a7mZxj6Wx4eqVNuYyDc5T4XPJN9GaAWaUf4cZQFlf2m4Fqq0HoghjtcPKo+BZviVPPKA==}
     engines: {node: '>=22.12.0'}
 
+  '@netlify/functions@6.1.1':
+    resolution: {integrity: sha512-hTZaFcNZG+ntoAkDBRv+TMN6Nns6+mVAcMGtmXR3lCkhryxydpb2AUZDOz0zx9Zzb750R9UhoqcmfV06og9wFQ==}
+    engines: {node: '>=22.12.0'}
+
   '@netlify/headers-parser@10.1.1':
     resolution: {integrity: sha512-ooiSc/eN/ktuugZmY4GVPh6nBYz2um0zpemokDvTLLQPF12QyXil8N6fr82wdLi03WNowwiL98eultZkTyHlyw==}
     engines: {node: '>=22.12.0'}
@@ -862,6 +870,10 @@ packages:
     resolution: {integrity: sha512-OHo40+V3QZkR+UrDjqhN+LekrAby/dSSJxsvyYs9i88E/mSl3goB/ysoL+VYROm190egxmQyRYlHK7vL4GeHBQ==}
     engines: {node: '>=22.12.0'}
 
+  '@netlify/runtime-utils@3.0.1':
+    resolution: {integrity: sha512-PythjseqdFTvaTK28IiRZ/w0YOZKgyBDxiXuCNEwCBxidnKZ7najsOMtstwwzmsRtfHbmXHOB5NLaGCnvnvBTg==}
+    engines: {node: '>=22.12.0'}
+
   '@netlify/runtime@5.0.4':
     resolution: {integrity: sha512-CaST8JVVUUTAC1Ay8tLdo7huhwFUbp9KfDFZQmUSOeUEvbQW6cg1Z6CeDrgTE7bTtBz/fxMFo5C+u+6wIbXk7g==}
     engines: {node: '>=22.12.0'}
@@ -888,6 +900,10 @@ packages:
 
   '@netlify/types@3.0.0':
     resolution: {integrity: sha512-zRCidsQgI4CZWrZB/kmwdPf0QbSNljakfNSLizFvrsSA3UcUrTWSBNMVKmZnob92/8ESeUN0ewXLOlffJU+ATQ==}
+    engines: {node: '>=22.12.0'}
+
+  '@netlify/types@3.3.1':
+    resolution: {integrity: sha512-LwPy3VpwMTETniJEgLr67yP8Rt8eORZaQ/NwVXhOOkv9q1F2SANSoJbfkhEmyLpwQ/aoPTAi0bULBDlFHXwEQA==}
     engines: {node: '>=22.12.0'}
 
   '@netlify/vite-plugin@3.0.1':
@@ -4482,6 +4498,10 @@ snapshots:
     dependencies:
       '@netlify/runtime-utils': 3.0.0
 
+  '@netlify/cache@4.2.1':
+    dependencies:
+      '@netlify/runtime-utils': 3.0.1
+
   '@netlify/config@25.2.5':
     dependencies:
       '@netlify/api': 15.1.2
@@ -4634,6 +4654,11 @@ snapshots:
     dependencies:
       '@netlify/types': 3.0.0
 
+  '@netlify/functions@6.1.1':
+    dependencies:
+      '@netlify/cache': 4.2.1
+      '@netlify/types': 3.3.1
+
   '@netlify/headers-parser@10.1.1':
     dependencies:
       escape-string-regexp: 5.0.0
@@ -4696,6 +4721,8 @@ snapshots:
 
   '@netlify/runtime-utils@3.0.0': {}
 
+  '@netlify/runtime-utils@3.0.1': {}
+
   '@netlify/runtime@5.0.4(supports-color@7.2.0)':
     dependencies:
       '@netlify/blobs': 11.1.0(supports-color@7.2.0)
@@ -4726,6 +4753,8 @@ snapshots:
   '@netlify/types@2.8.0': {}
 
   '@netlify/types@3.0.0': {}
+
+  '@netlify/types@3.3.1': {}
 
   '@netlify/vite-plugin@3.0.1(babel-plugin-macros@3.1.0)(rollup@2.80.0)(supports-color@7.2.0)(vite@8.3.0(@types/node@22.20.3)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))':
     dependencies:
